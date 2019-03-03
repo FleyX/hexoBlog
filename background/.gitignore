@@ -1,0 +1,18 @@
+.DS_Store
+/.vscode/
+.vscode
+node_modules/
+/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+yarn.lock
+config/github.js
+config/cnblog.js
+files/*
+files/output/!.gitkeep
+files/mdFile/!.gitkeep
+files/temp/!.gitkeep
+log/file/!.gitkeep

@@ -1,0 +1,40 @@
+version: "2"
+services:
+  hexo-blog:
+    build: ./
+    networks:
+      - hexo-blog
+    volumes:
+      - ./../:/etc/hexo-blog
+      - /etc/localtime:/etc/localtime
+    working_dir: /etc/hexo-blog
+    command:
+      - /bin/bash 
+      - -c
+      - |
+        cd hexo
+        cnpm install
+        cd ../background
+        cnpm install 
+        tsc  
+        node ./dist/index.js
+    environment:
+      # markdown博客所在git仓库，请填写https链接
+      GIT_REP: ""
+      # webhook secret密钥
+      TOKEN: ""
+      
+
+  hexo-nginx:
+    image: nginx:latest
+    networks:
+      - hexo-blog
+    volumes:
+      - ./nginx/logs:/var/log/nginx
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./../hexo/public:/opt/blog
+    ports:
+      - 80:80
+networks:
+  hexo-blog:
+
