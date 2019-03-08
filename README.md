@@ -87,9 +87,9 @@ author: fleyX
 
 ![](https://raw.githubusercontent.com/FleyX/files/master/blog/20190303152128.png)
 
-### 集成gitment评价
+### 集成gitalk评价
 
-&emsp;&emsp;建议百度如何配置gitment，这里默认你已经会完毕，拥有id和secret。编辑570行,设置enable为true，然后加入你的信息：
+&emsp;&emsp;建议百度如何在github配置gitalk，这里默认你已经完毕完毕，拥有id和secret。编辑570行,设置enable为true，然后加入你的信息：
 
 ![](https://raw.githubusercontent.com/FleyX/files/master/blog/20190303152638.png)
 
